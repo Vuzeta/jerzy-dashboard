@@ -1,0 +1,13 @@
+.Container {
+	width: 100%;
+	/* background-color: grey; */
+	margin-top: 50px;
+	padding: 10px;
+	height: 100%;
+	position: relative;
+}
+
+.Form {
+	width: 80%;
+	margin: 50px auto;
+}
