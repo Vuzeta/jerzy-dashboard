@@ -4,13 +4,13 @@ import * as IoIcons from 'react-icons/io';
 
 export const SidebarData = [
 	{
-		title: 'Home',
+		title: 'Strona Główna',
 		path: '/',
 		icon: <AiIcons.AiFillHome />,
 		cName: 'nav-text',
 	},
 	{
-		title: 'Calculator',
+		title: 'Kalkulator',
 		path: '/calculator',
 		icon: <IoIcons.IoIosPaper />,
 		cName: 'nav-text',

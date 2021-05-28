@@ -1,5 +1,5 @@
 .navbar {
-	background-color: #060b26;
+	background-color: #3e50b4;
 	height: 80px;
 	display: flex;
 	justify-content: start;
@@ -9,6 +9,7 @@
 	left: 0;
 	right: 0;
 	z-index: 999999;
+	font-family: 'Lato', sans-serif;
 }
 
 .navbar span {
@@ -22,7 +23,7 @@
 }
 
 .nav-menu {
-	background-color: #060b26;
+	background-color: #3e50b4;
 	width: 250px;
 	height: 100vh;
 	display: flex;
@@ -73,7 +74,7 @@
 }
 
 .navbar-toggle {
-	background-color: #060b26;
+	background-color: #3e50b4;
 	width: 100%;
 	height: 80px;
 	display: flex;
