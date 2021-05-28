@@ -128,8 +128,8 @@ class Calculator extends Component {
 		));
 		return (
 			<div className={styles.Container}>
-				<AddSectionButton addSection={this.addSection} text="Dodaj sekcję" />
 				<form className={styles.Form} onSubmit={this.handleGenerateXls}>
+					<AddSectionButton addSection={this.addSection} text="Dodaj sekcję" />
 					{section}
 					{this.state.loading && <Loader />}
 					{this.state.list.length > 0 ? (

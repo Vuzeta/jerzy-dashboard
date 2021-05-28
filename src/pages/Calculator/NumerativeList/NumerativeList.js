@@ -1,6 +1,8 @@
 import React from 'react';
 
 import styles from './NumerativeList.module.css';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 
 const NumerativeList = ({
 	id,
@@ -15,49 +17,57 @@ const NumerativeList = ({
 }) => {
 	return (
 		<div className={styles.FieldsContainer}>
-			<input
-				type="text"
+			<TextField
+				id="outlined-required"
+				label="Naz.pom"
+				variant="outlined"
 				className={styles.Input}
-				placeholder="Nazwa pom."
+				required
 				name="roomName"
 				onChange={handleNumerativeField(id, roomID)}
-				required
 			/>
-			<input
+			<TextField
+				id="outlined-required"
+				label="Pow. [m2]"
+				variant="outlined"
 				type="number"
-				className={styles.Input}
-				placeholder="Pow. [m2]"
+				required
 				name="roomArea"
 				onChange={handleNumerativeField(id, roomID)}
-				required
 			/>
-			<input
+			<TextField
+				id="outlined-required"
+				label="Wys. pom.[m]"
 				type="number"
-				className={styles.Input}
-				placeholder="Wys. pom.[m]"
+				variant="outlined"
+				required
 				name="roomHeight"
 				onChange={handleNumerativeField(id, roomID)}
-				required
 			/>
-			<input
+			<TextField
+				id="outlined-required"
+				label="Nawiew [m3/h]"
 				type="number"
-				className={styles.Input}
-				placeholder="Nawiew [m3/h]"
+				variant="outlined"
+				required
 				name="roomAirflow"
 				onChange={handleNumerativeField(id, roomID)}
-				required
 			/>
-			<input
+			<TextField
+				id="outlined-required"
+				label="Wywiew [m3/h]"
 				type="number"
-				className={styles.Input}
-				placeholder="Wywiew [m3/h]"
+				variant="outlined"
 				name="roomExhaust"
 				onChange={handleNumerativeField(id, roomID)}
-				required
 			/>
-			<span className={styles.FieldRemove} onClick={() => removeNumerativeList(id, roomID)}>
+			<Button
+				variant="contained"
+				className={styles.RemoveBtn}
+				onClick={() => removeNumerativeList(id, roomID)}
+			>
 				-
-			</span>
+			</Button>
 		</div>
 	);
 };

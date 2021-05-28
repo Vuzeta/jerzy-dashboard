@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './Section.module.css';
 import NumerativeList from '../NumerativeList/NumerativeList';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 
 const Section = (props) => {
 	const numeratliveList = props.roomsConfigurationsList.map((el) => (
@@ -21,19 +23,32 @@ const Section = (props) => {
 	return (
 		<>
 			<div className={styles.SectionFieldSet}>
-				<input
-					type="text"
+				<TextField
+					id="outlined-basic"
+					label="Nazwa Sekcji"
 					className={styles.SectionInput}
 					onChange={props.handleFloorName(props.id)}
 					value={props.floorName}
+					variant="outlined"
+					inputProps={{
+						style: { textAlign: 'center', height: '20px', fontSize: '20px' },
+					}}
 					required
 				/>
-				<span className={styles.SectionAdd} onClick={() => props.addNumerativeList(props.id)}>
+				<Button
+					variant="contained"
+					className={styles.AddBtn}
+					onClick={() => props.addNumerativeList(props.id)}
+				>
 					+
-				</span>
-				<span className={styles.SectionRemove} onClick={() => props.removeSection(props.id)}>
+				</Button>
+				<Button
+					variant="contained"
+					className={styles.RemoveBtn}
+					onClick={() => props.removeSection(props.id)}
+				>
 					-
-				</span>
+				</Button>
 			</div>
 			{numeratliveList}
 		</>

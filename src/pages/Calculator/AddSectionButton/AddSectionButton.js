@@ -1,12 +1,18 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
 
 import styles from './AddSectionButton.module.css';
 
 const AddSectionButton = ({ addSection, text }) => {
 	return (
-		<button className={styles.Button} onClick={() => addSection()}>
+		<Button
+			className={styles.Button}
+			variant="contained"
+			color="primary"
+			onClick={() => addSection()}
+		>
 			{text}
-		</button>
+		</Button>
 	);
 };
 
